@@ -6,7 +6,8 @@ const projects = {
       role: "Direction / Motion",
       tools: "After Effects / Photoshop / Premiere Pro",
       year: "2025",
-      accent: "pink"
+      accent: "pink",
+      shape: "tall"
     },
     {
       title: "Cutweed",
@@ -14,7 +15,8 @@ const projects = {
       role: "Motion / Edit",
       tools: "Premiere Pro / After Effects",
       year: "2024",
-      accent: "blue"
+      accent: "blue",
+      shape: "wide"
     },
     {
       title: "You Killed Him",
@@ -22,7 +24,8 @@ const projects = {
       role: "Concept / Visual Design",
       tools: "Photoshop / Blender",
       year: "2024",
-      accent: "paper"
+      accent: "paper",
+      shape: "portrait"
     },
     {
       title: "What If?",
@@ -30,7 +33,8 @@ const projects = {
       role: "Storyboard / Motion",
       tools: "After Effects / Procreate",
       year: "2023",
-      accent: "pink"
+      accent: "pink",
+      shape: "square"
     }
   ],
   storyboard: [
@@ -40,7 +44,8 @@ const projects = {
       role: "Storyboarding",
       tools: "Photoshop / Procreate",
       year: "2025",
-      accent: "paper"
+      accent: "paper",
+      shape: "wide"
     },
     {
       title: "Treecare",
@@ -48,7 +53,8 @@ const projects = {
       role: "Storyboard / Planning",
       tools: "Illustrator / Photoshop",
       year: "2024",
-      accent: "blue"
+      accent: "blue",
+      shape: "portrait"
     },
     {
       title: "Kopal",
@@ -56,7 +62,8 @@ const projects = {
       role: "Concept / Board",
       tools: "Photoshop",
       year: "2023",
-      accent: "pink"
+      accent: "pink",
+      shape: "square"
     }
   ],
   illustration: [
@@ -66,7 +73,8 @@ const projects = {
       role: "Illustration",
       tools: "Photoshop / Procreate",
       year: "2025",
-      accent: "pink"
+      accent: "pink",
+      shape: "portrait"
     },
     {
       title: "Commission Works",
@@ -74,7 +82,8 @@ const projects = {
       role: "Illustration / Client Work",
       tools: "Procreate / Photoshop",
       year: "2024",
-      accent: "paper"
+      accent: "paper",
+      shape: "wide"
     },
     {
       title: "Sketchbook",
@@ -82,7 +91,8 @@ const projects = {
       role: "Sketch / Research",
       tools: "Pencil / Procreate",
       year: "2023",
-      accent: "blue"
+      accent: "blue",
+      shape: "square"
     }
   ]
 };
@@ -106,7 +116,7 @@ function renderProjects(tab) {
 
   projects[tab].forEach((project, index) => {
     const button = document.createElement("button");
-    button.className = "project-card";
+    button.className = `project-card ${project.shape || "square"}`;
     button.dataset.accent = project.accent;
     button.type = "button";
     button.innerHTML = `
